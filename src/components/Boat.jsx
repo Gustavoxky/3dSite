@@ -2,7 +2,7 @@ import React from "react";
 import { useGLTF } from "@react-three/drei";
 
 
-export const Boat = ({ isMobile }) => {
+export const Boat = () => {
   const computer = useGLTF("./models/boat/model.gltf");
 
   return (
@@ -26,5 +26,7 @@ export const Boat = ({ isMobile }) => {
     </group>
   );
 };
+
+useGLTF.preload("./models/boat/model.gltf");
 
 

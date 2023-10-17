@@ -8,8 +8,8 @@ import { useFrame } from "@react-three/fiber";
 import { fadeOnBeforeCompile } from "../utils/fadeMaterial";
 
 
-export function Lighthouse ({ sceneOpacity, ...props }) {
-  const { nodes, materials } = useGLTF("./models/lighthouse/scene.gltf");
+export function Island ({ sceneOpacity, ...props }) {
+  const { nodes, materials } = useGLTF("./models/lowpoly_trees/scene.gltf");
 
   const materialRef = useRef();
 
@@ -38,5 +38,5 @@ export function Lighthouse ({ sceneOpacity, ...props }) {
   );
 };
 
-useGLTF.preload("./models/lighthouse/scene.gltf");
+useGLTF.preload("./models/lowpoly_trees/scene.gltf");
 

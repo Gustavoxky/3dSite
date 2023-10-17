@@ -23,10 +23,10 @@ export const TextSection = ({ title, subtitle, ...props }) => {
       )}
 
       <Text
-        color="white"
+        color="black"
         anchorX={"left"}
         anchorY="top"
-        fontSize={0.2}
+        fontSize={0.25}
         maxWidth={2.5}
         font={"./fonts/Inter-Regular.ttf"}
       >

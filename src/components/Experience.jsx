@@ -13,6 +13,7 @@ import { TextSection } from "./TextSection";
 import { Boat } from "./Boat";
 import { Ocean } from "./Ocean";
 import { Lighthouse } from "./Lighthouse";
+import { Island } from "./Island";
 
 const LINE_NB_POINTS = 1000;
 const CURVE_DISTANCE = 250;
@@ -52,7 +53,7 @@ export const Experience = () => {
           curvePoints[1].y + 1,
           curvePoints[1].z
         ),
-        subtitle: `Welcome to Wawatmos,
+        subtitle: `Welcome to my 3d website,
 Have a seat and enjoy the ride!`,
       },
       {
@@ -62,9 +63,8 @@ Have a seat and enjoy the ride!`,
           curvePoints[2].y + 1,
           curvePoints[2].z
         ),
-        title: "Services",
-        subtitle: `Do you want a drink?
-We have a wide range of beverages!`,
+        title: "About me",
+        subtitle: `My name is Gustavo correia, and i'm a software engeneer`,
       },
       {
         cameraRailDist: -1,
@@ -89,179 +89,69 @@ We have a wide range of beverages!`,
     ];
   }, []);
 
-  const clouds = useMemo(
+  const lighthouse = useMemo(
     () => [
-      // STARTING
-      {
-        position: new Vector3(-3.5, 0, -7),
-      },
-      {
-        position: new Vector3(3.5, 0, -10),
-      },
+     
       {
         scale: new Vector3(1, 1, 1),
-        position: new Vector3(-18, 0.2, -68),
-        rotation: new Euler(-Math.PI / 5, Math.PI / 6, 0),
+        position: new Vector3(20, -1, -112),
       },
+     
       {
         scale: new Vector3(1, 1, 1),
-        position: new Vector3(10, 0, -52),
-      },
-      // FIRST POINT
-      {
-        scale: new Vector3(4, 4, 4),
-        position: new Vector3(
-          curvePoints[1].x + 10,
-          curvePoints[1].y - 4,
-          curvePoints[1].z + 64
-        ),
-      },
-      {
-        scale: new Vector3(3, 3, 3),
-        position: new Vector3(
-          curvePoints[1].x - 20,
-          curvePoints[1].y + 4,
-          curvePoints[1].z + 28
-        ),
-        rotation: new Euler(0, Math.PI / 7, 0),
-      },
-      {
-        rotation: new Euler(0, Math.PI / 7, Math.PI / 5),
-        scale: new Vector3(5, 5, 5),
-        position: new Vector3(
-          curvePoints[1].x - 13,
-          curvePoints[1].y + 4,
-          curvePoints[1].z - 62
-        ),
-      },
-      {
-        rotation: new Euler(Math.PI / 2, Math.PI / 2, Math.PI / 3),
-        scale: new Vector3(5, 5, 5),
-        position: new Vector3(
-          curvePoints[1].x + 54,
-          curvePoints[1].y + 2,
-          curvePoints[1].z - 82
-        ),
-      },
-      {
-        scale: new Vector3(5, 5, 5),
         position: new Vector3(
           curvePoints[1].x + 8,
-          curvePoints[1].y - 14,
-          curvePoints[1].z - 22
+          curvePoints[1].y - 2,
+          curvePoints[1].z - 72
         ),
       },
-      // SECOND POINT
+     
       {
-        scale: new Vector3(3, 3, 3),
+        scale: new Vector3(1, 1, 1),
         position: new Vector3(
-          curvePoints[2].x + 6,
-          curvePoints[2].y - 7,
-          curvePoints[2].z + 50
+          curvePoints[2].x - 4,
+          curvePoints[2].y - 2,
+          curvePoints[2].z - 56
         ),
       },
+      
       {
-        scale: new Vector3(2, 2, 2),
-        position: new Vector3(
-          curvePoints[2].x - 2,
-          curvePoints[2].y + 4,
-          curvePoints[2].z - 26
-        ),
-      },
-      {
-        scale: new Vector3(4, 4, 4),
-        position: new Vector3(
-          curvePoints[2].x + 12,
-          curvePoints[2].y + 1,
-          curvePoints[2].z - 86
-        ),
-        rotation: new Euler(Math.PI / 4, 0, Math.PI / 3),
-      },
-      // THIRD POINT
-      {
-        scale: new Vector3(3, 3, 3),
-        position: new Vector3(
-          curvePoints[3].x + 3,
-          curvePoints[3].y - 10,
-          curvePoints[3].z + 50
-        ),
-      },
-      {
-        scale: new Vector3(3, 3, 3),
-        position: new Vector3(
-          curvePoints[3].x - 10,
-          curvePoints[3].y,
-          curvePoints[3].z + 30
-        ),
-        rotation: new Euler(Math.PI / 4, 0, Math.PI / 5),
-      },
-      {
-        scale: new Vector3(4, 4, 4),
+        scale: new Vector3(1, 1, 1),
         position: new Vector3(
           curvePoints[3].x - 20,
-          curvePoints[3].y - 5,
+          curvePoints[3].y - 2,
           curvePoints[3].z - 8
         ),
-        rotation: new Euler(Math.PI, 0, Math.PI / 5),
-      },
-      {
-        scale: new Vector3(5, 5, 5),
-        position: new Vector3(
-          curvePoints[3].x + 0,
-          curvePoints[3].y - 5,
-          curvePoints[3].z - 98
-        ),
-        rotation: new Euler(0, Math.PI / 3, 0),
-      },
-      // FOURTH POINT
-      {
-        scale: new Vector3(2, 2, 2),
-        position: new Vector3(
-          curvePoints[4].x + 3,
-          curvePoints[4].y - 10,
-          curvePoints[4].z + 2
-        ),
-      },
-      {
-        scale: new Vector3(3, 3, 3),
-        position: new Vector3(
-          curvePoints[4].x + 24,
-          curvePoints[4].y - 6,
-          curvePoints[4].z - 42
-        ),
-        rotation: new Euler(Math.PI / 4, 0, Math.PI / 5),
-      },
-      {
-        scale: new Vector3(3, 3, 3),
-        position: new Vector3(
-          curvePoints[4].x - 4,
-          curvePoints[4].y + 9,
-          curvePoints[4].z - 62
-        ),
-        rotation: new Euler(Math.PI / 3, 0, Math.PI / 3),
-      },
-      // FINAL
-      {
-        scale: new Vector3(3, 3, 3),
-        position: new Vector3(
-          curvePoints[7].x + 12,
-          curvePoints[7].y - 5,
-          curvePoints[7].z + 60
-        ),
-        rotation: new Euler(-Math.PI / 4, -Math.PI / 6, 0),
-      },
-      {
-        scale: new Vector3(3, 3, 3),
-        position: new Vector3(
-          curvePoints[7].x - 12,
-          curvePoints[7].y + 5,
-          curvePoints[7].z + 120
-        ),
-        rotation: new Euler(Math.PI / 4, Math.PI / 6, 0),
       },
     ],
     []
   );
+     
+      const island = useMemo(() => [
+        {
+          scale: new Vector3(1, 1, 1),
+          position: new Vector3(
+            curvePoints[4].x + 24,
+            curvePoints[4].y + 4,
+            curvePoints[4].z - 42
+          ),
+          rotation: new Euler( -1.6, 0, 2),
+        },
+       
+        {
+          scale: new Vector3(1, 1, 1),
+          position: new Vector3(
+            curvePoints[7].x - 20,
+            curvePoints[7].y + 4,
+            curvePoints[7].z + 120
+          ),
+          rotation: new Euler(-1.7, 0, 6),
+        },
+      ],
+      []
+      );
+      
+   
 
   const shape = useMemo(() => {
     const shape = new THREE.Shape();
@@ -305,7 +195,7 @@ We have a wide range of beverages!`,
     if (end && sceneOpacity.current > 0) {
       sceneOpacity.current = THREE.MathUtils.lerp(
         sceneOpacity.current,
-        0,
+        1,
         delta
       );
     }
@@ -430,7 +320,7 @@ We have a wide range of beverages!`,
 
   const tl = useRef();
   const backgroundColors = useRef({
-    colorA: "#3535cc",
+    colorA: "#2c2cff",
     colorB: "#abaadd",
   });
 
@@ -514,7 +404,7 @@ We have a wide range of beverages!`,
             />
           </group>
           <group ref={airplane}>
-            <Float floatIntensity={1} speed={1.5} rotationIntensity={0.5}>
+            <Float floatIntensity={0} speed={0} rotationIntensity={0}>
               <Boat
                 rotation-y={Math.PI / 2}
                 // scale={[0.2, 0.2, 0.2]}
@@ -553,8 +443,11 @@ We have a wide range of beverages!`,
         </group>
 
         {/* CLOUDS */}
-        {clouds.map((cloud, index) => (
-          <Cloud sceneOpacity={sceneOpacity} {...cloud} key={index} />
+        {lighthouse.map((cloud, index) => (
+          <Lighthouse sceneOpacity={sceneOpacity} {...cloud} key={index} />
+        ))}
+        {island.map((cloud, index) => (
+          <Island sceneOpacity={sceneOpacity} {...cloud} key={index} />
         ))}
       </>
     ),

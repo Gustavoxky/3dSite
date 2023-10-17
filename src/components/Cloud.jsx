@@ -8,7 +8,7 @@ import React, { useRef } from "react";
 import { fadeOnBeforeCompile } from "../utils/fadeMaterial";
 
 export function Cloud({ sceneOpacity, ...props }) {
-  const { nodes, materials } = useGLTF("./models/lighthouse/scene.gltf");
+  const { nodes, materials } = useGLTF("./models/cloud/model.gltf");
 
   const materialRef = useRef();
 
@@ -18,7 +18,7 @@ export function Cloud({ sceneOpacity, ...props }) {
 
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes.Sketchfab_Scene.geometry}>
+      <mesh geometry={nodes.Mball001.geometry}>
         <meshStandardMaterial
           ref={materialRef}
           onBeforeCompile={fadeOnBeforeCompile}
@@ -30,4 +30,4 @@ export function Cloud({ sceneOpacity, ...props }) {
   );
 }
 
-useGLTF.preload("./models/lighthouse/scene.gltf");
+useGLTF.preload("./models/cloud/model.gltf");
