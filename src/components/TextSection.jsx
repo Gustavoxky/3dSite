@@ -23,7 +23,7 @@ export const TextSection = ({ title, subtitle, ...props }) => {
       )}
 
       <Text
-        color="black"
+        color="white"
         anchorX={"left"}
         anchorY="top"
         fontSize={0.25}

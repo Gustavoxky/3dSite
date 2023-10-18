@@ -8,12 +8,14 @@ import { usePlay } from "../contexts/Play";
 import { fadeOnBeforeCompile } from "../utils/fadeMaterial";
 // import { Airplane } from "./Airplane";
 import { Background } from "./Background";
-import { Cloud } from "./Cloud";
+import { Ship } from "./Ship";
 import { TextSection } from "./TextSection";
 import { Boat } from "./Boat";
 import { Ocean } from "./Ocean";
 import { Lighthouse } from "./Lighthouse";
 import { Island } from "./Island";
+import { Whale } from "./Whale";
+
 
 const LINE_NB_POINTS = 1000;
 const CURVE_DISTANCE = 250;
@@ -49,9 +51,9 @@ export const Experience = () => {
       {
         cameraRailDist: -1,
         position: new Vector3(
-          curvePoints[1].x - 4,
+          curvePoints[1].x + 20,
           curvePoints[1].y + 1,
-          curvePoints[1].z
+          curvePoints[1].z - 55
         ),
         subtitle: `Welcome to my 3d website,
 Have a seat and enjoy the ride!`,
@@ -59,22 +61,12 @@ Have a seat and enjoy the ride!`,
       {
         cameraRailDist: 1.5,
         position: new Vector3(
-          curvePoints[2].x + 2,
+          curvePoints[2].x - 145,
           curvePoints[2].y + 1,
-          curvePoints[2].z
+          curvePoints[2].z - 160
         ),
         title: "About me",
         subtitle: `My name is Gustavo correia, and i'm a software engeneer`,
-      },
-      {
-        cameraRailDist: -1,
-        position: new Vector3(
-          curvePoints[3].x - 3,
-          curvePoints[3].y + 1,
-          curvePoints[3].z
-        ),
-        title: "Fear of flying?",
-        subtitle: `Our flight attendants will help you have a great journey`,
       },
       {
         cameraRailDist: 1.5,
@@ -86,6 +78,16 @@ Have a seat and enjoy the ride!`,
         title: "Movies",
         subtitle: `We provide a large selection of medias, we highly recommend you Porco Rosso during the flight`,
       },
+      {
+        cameraRailDist: -1,
+        position: new Vector3(
+          curvePoints[4].x - 45.5,
+          curvePoints[4].y + 1,
+          curvePoints[4].z - 140
+        ),
+        title: "Fear of flying?",
+        subtitle: `Our flight attendants will help you have a great journey`,
+      },
     ];
   }, []);
 
@@ -96,24 +98,14 @@ Have a seat and enjoy the ride!`,
         scale: new Vector3(1, 1, 1),
         position: new Vector3(20, -1, -112),
       },
-     
-      {
-        scale: new Vector3(1, 1, 1),
-        position: new Vector3(
-          curvePoints[1].x + 8,
-          curvePoints[1].y - 2,
-          curvePoints[1].z - 72
-        ),
-      },
-     
-      {
-        scale: new Vector3(1, 1, 1),
-        position: new Vector3(
-          curvePoints[2].x - 4,
-          curvePoints[2].y - 2,
-          curvePoints[2].z - 56
-        ),
-      },
+      // {
+      //   scale: new Vector3(1, 1, 1),
+      //   position: new Vector3(
+      //     curvePoints[2].x - 4,
+      //     curvePoints[2].y - 2,
+      //     curvePoints[2].z - 56
+      //   ),
+      // },
       
       {
         scale: new Vector3(1, 1, 1),
@@ -131,22 +123,59 @@ Have a seat and enjoy the ride!`,
         {
           scale: new Vector3(1, 1, 1),
           position: new Vector3(
-            curvePoints[4].x + 24,
-            curvePoints[4].y + 4,
-            curvePoints[4].z - 42
+            curvePoints[2].x + 30,
+            curvePoints[2].y - 2,
+            curvePoints[2].z + 56 
           ),
           rotation: new Euler( -1.6, 0, 2),
         },
+        // {
+        //   scale: new Vector3(1, 1, 1),
+        //   position: new Vector3(
+        //     curvePoints[4].x + 84,
+        //     curvePoints[4].y + 4,
+        //     curvePoints[4].z - 62
+        //   ),
+        //   rotation: new Euler( -1.6, 0, 2),
+        // },
        
+        // {
+        //   scale: new Vector3(1, 1, 1),
+        //   position: new Vector3(
+        //     curvePoints[7].x + 10,
+        //     curvePoints[7].y + 5,
+        //     curvePoints[7].z - 20
+        //   ),
+        //   rotation: new Euler(-1.7, 0, 6),
+        // },
+      ],
+      []
+      );
+
+      const ship = useMemo(() => [
         {
           scale: new Vector3(1, 1, 1),
           position: new Vector3(
-            curvePoints[7].x - 20,
-            curvePoints[7].y + 4,
-            curvePoints[7].z + 120
+            curvePoints[4].x - 180,
+            curvePoints[4].y - 10,
+            curvePoints[4].z - 392
           ),
-          rotation: new Euler(-1.7, 0, 6),
+          rotation: new Euler( -0.1, 0, 0),
         },
+      ],
+      []
+      );
+
+      const whale = useMemo(() => [
+        {
+          scale: new Vector3(1, 1, 1),
+          position: new Vector3(
+            curvePoints[4].x + 64,
+            curvePoints[4].y + 10,
+            curvePoints[4].z - 62
+          ),
+          rotation: new Euler( 0, 0, 2.2),
+        }, 
       ],
       []
       );
@@ -448,6 +477,12 @@ Have a seat and enjoy the ride!`,
         ))}
         {island.map((cloud, index) => (
           <Island sceneOpacity={sceneOpacity} {...cloud} key={index} />
+        ))}
+        {ship.map((cloud, index) => (
+          <Ship sceneOpacity={sceneOpacity} {...cloud} key={index} />
+        ))}
+        {whale.map((cloud, index) => (
+          <Whale sceneOpacity={sceneOpacity} {...cloud} key={index} />
         ))}
       </>
     ),

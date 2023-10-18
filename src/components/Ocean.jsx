@@ -1,12 +1,12 @@
 import * as THREE from 'three'
-import React, { useRef, useMemo } from 'react'
+import React, { useRef, useMemo, memo } from 'react'
 import { extend, useThree, useLoader, useFrame } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { Water } from 'three-stdlib'
 
 extend({ Water })
 
-export const Ocean = () => {
+export const Ocean = memo(() => {
     const ref = useRef()
     const gl = useThree((state) => state.gl)
     const waterNormals = useLoader(THREE.TextureLoader, './images/waternormals.jpeg')
@@ -33,4 +33,4 @@ export const Ocean = () => {
         <water ref={ref} args={[geom, config]} rotation-x={-Math.PI / 2} position={[0, -1, 0]} />
       </>
     ) 
-  }
+  })
