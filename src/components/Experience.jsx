@@ -66,7 +66,7 @@ Have a seat and enjoy the ride!`,
           curvePoints[2].z - 160
         ),
         title: "About me",
-        subtitle: `My name is Gustavo correia, and i'm a software engeneer`,
+        subtitle: `I'm Brazilian, born in Pernambuco, and currently residing in São José dos Campos, São Paulo.`,
       },
       {
         cameraRailDist: 1.5,
@@ -75,8 +75,8 @@ Have a seat and enjoy the ride!`,
           curvePoints[4].y + 1,
           curvePoints[4].z - 12
         ),
-        title: "Movies",
-        subtitle: `We provide a large selection of medias, we highly recommend you Porco Rosso during the flight`,
+        title: "Career ",
+        subtitle: `My career spans software engineering and design, allowing for a multidisciplinary approach to projects.`,
       },
       {
         cameraRailDist: -1,
@@ -85,8 +85,8 @@ Have a seat and enjoy the ride!`,
           curvePoints[4].y + 1,
           curvePoints[4].z - 140
         ),
-        title: "Fear of flying?",
-        subtitle: `Our flight attendants will help you have a great journey`,
+        title: "",
+        subtitle: `My diverse geographical experience and the combination of technology and design skills contribute to a unique perspective in my work.`,
       },
     ];
   }, []);
