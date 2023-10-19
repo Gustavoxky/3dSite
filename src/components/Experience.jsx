@@ -170,11 +170,11 @@ Have a seat and enjoy the ride!`,
         {
           scale: new Vector3(1, 1, 1),
           position: new Vector3(
-            curvePoints[4].x + 64,
-            curvePoints[4].y + 10,
+            curvePoints[4].x + 54,
+            curvePoints[4].y + 15,
             curvePoints[4].z - 62
           ),
-          rotation: new Euler( 0, 0, 2.2),
+          rotation: new Euler( 0.5, 0, 2.2),
         }, 
       ],
       []
@@ -349,7 +349,7 @@ Have a seat and enjoy the ride!`,
 
   const tl = useRef();
   const backgroundColors = useRef({
-    colorA: "#2c2cff",
+    colorA: "#0033ff",
     colorB: "#abaadd",
   });
 
@@ -371,7 +371,7 @@ Have a seat and enjoy the ride!`,
     });
     tl.current.to(backgroundColors.current, {
       duration: 1,
-      colorA: "#81318b",
+      colorA: "#0d041f",
       colorB: "#55ab8f",
     });
 
