@@ -55,28 +55,30 @@ export const Experience = () => {
           curvePoints[1].y + 1,
           curvePoints[1].z - 55
         ),
-        subtitle: `Welcome to my 3d website,
+        subtitle: `Welcome to my website,
 Have a seat and enjoy the ride!`,
       },
       {
         cameraRailDist: 1.5,
         position: new Vector3(
           curvePoints[2].x - 145,
-          curvePoints[2].y + 1,
+          curvePoints[2].y + 1.5,
           curvePoints[2].z - 160
         ),
+        rotation: new Euler( 0, 0.7, 0),
+
         title: "About me",
-        subtitle: `I'm Brazilian, born in Pernambuco, and currently residing in São José dos Campos, São Paulo.`,
+        subtitle: `I am a Software Engineering and Computer Science and designer with a passion for software development and technology.`,
       },
       {
         cameraRailDist: 1.5,
         position: new Vector3(
           curvePoints[4].x + 3.5,
-          curvePoints[4].y + 1.5,
+          curvePoints[4].y + 2.5,
           curvePoints[4].z - 12
         ),
-        title: "Career ",
-        subtitle: `My career spans software engineering and design, allowing for a multidisciplinary approach to projects.`,
+        title: "Experience and Skills",
+        subtitle: `I have experience in TypeScript, JavaScript, React, AWS, Node.js, TDD, Scrum, and knowledge in various other technologies, including Python, Java, Docker, and databases.`,
       },
       {
         cameraRailDist: -1,
@@ -85,8 +87,8 @@ Have a seat and enjoy the ride!`,
           curvePoints[4].y + 1.5,
           curvePoints[4].z - 140
         ),
-        title: "",
-        subtitle: `My diverse geographical experience and the combination of technology and design skills contribute to a unique perspective in my work.`,
+        title: "Commitment to Quality and Agile Methodologies",
+        subtitle: `Committed to high-quality software development, applying TDD and agile methodologies like Scrum. Ready to contribute to challenging projects.`,
       },
     ];
   }, []);
