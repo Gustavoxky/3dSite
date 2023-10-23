@@ -10,6 +10,16 @@ function App() {
 
   return (
     <>
+    <div className="menu">
+            <ul>
+              <li>
+                <a href="#home">Home</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
       <Canvas>
         <color attach="background" args={["#ececec"]} />
         <ScrollControls

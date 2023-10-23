@@ -58,24 +58,34 @@ body {
   height: 100%;
 }
 
-.logo {
-  font-family: "DM Serif Display", serif;
-  color: white;
+.menu {
+  width: 100%;
   font-size: 6rem;
   letter-spacing: 0.5rem;
   padding: 0;
   margin: 0;
   transform: translateY(-50%);
   position: absolute;
-  top: 50vh;
   animation: fadeUp 2.4s ease-in-out;
   transition: all 2s ease-in-out;
-}
-
-.intro--disappear .logo {
   top: 42px;
   transform: scale(0.25);
   transform-origin: center top;
+  z-index: 100;
+  cursor: pointer;
+
+}
+
+.menu a, ul, li {
+  display: flex;
+  margin: 20px;
+  text-decoration: none;
+  color: white;
+  appearance: none;
+  list-style-type: none;
+  font-family: "DM Serif Display", serif;
+  cursor: pointer;
+  z-index: 2000;
 }
 
 
@@ -114,7 +124,7 @@ body {
   overflow: hidden;
   transition: 0.42s ease-in-out;
   animation: fadeIn 2.4s ease-in-out 2s forwards;
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 .explore:hover {
@@ -170,12 +180,12 @@ body {
 /* RESPONSIVE */
 
 @media screen and (max-width: 768px) {
-  .logo {
+  .menu {
     font-size: 3rem;
     letter-spacing: 0.25rem;
   }
 
-  .intro--disappear .logo {
+  .intro--disappear .menu {
     top: 24px;
     transform: scale(0.5);
     transform-origin: center top;

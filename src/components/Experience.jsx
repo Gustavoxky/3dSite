@@ -72,7 +72,7 @@ Have a seat and enjoy the ride!`,
         cameraRailDist: 1.5,
         position: new Vector3(
           curvePoints[4].x + 3.5,
-          curvePoints[4].y + 1,
+          curvePoints[4].y + 1.5,
           curvePoints[4].z - 12
         ),
         title: "Career ",
@@ -82,7 +82,7 @@ Have a seat and enjoy the ride!`,
         cameraRailDist: -1,
         position: new Vector3(
           curvePoints[4].x - 45.5,
-          curvePoints[4].y + 1,
+          curvePoints[4].y + 1.5,
           curvePoints[4].z - 140
         ),
         title: "",
